@@ -62,3 +62,19 @@ button {
 .logo {
     margin-right: 1.5rem;
 }
+
+@media (min-width: 1600px) {
+    #nav-menu {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .menu-container {
+        max-width: 1600px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
