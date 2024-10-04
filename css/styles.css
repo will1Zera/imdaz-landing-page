@@ -63,6 +63,32 @@ button {
     margin-right: 1.5rem;
 }
 
+.textcenter {
+	text-align: center;
+}
+
+.midle-section {
+	text-align: center;
+	display: table;
+	width: 100%;
+}
+.midle-section .text {
+	display: block;
+	margin-top: 20px;
+}
+.midle-section .seperator {
+	border-bottom:1px solid #a2a2a2;
+	width: 35px;
+	display: inline-block;
+	margin: 20px;
+}
+
+.midle-section h3 {
+	font-size: 30px;
+	color: var(--primary-color);
+	font-weight: normal;
+}
+
 @media (min-width: 1600px) {
     #nav-menu {
         display: flex;

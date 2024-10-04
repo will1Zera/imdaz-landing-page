@@ -8,12 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/contact.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/header.js" defer></script>
+    <script src="js/contact.js" defer></script>
 </head>
 <body>
     <header id="nav-menu" aria-label="navigation bar">
@@ -33,7 +38,7 @@
                                 <ul role="menu">
                                     <li role="menuitem">
                                         <a class="dropdown-link" href="#descricao-item">
-                                            <img src="assets/item.svg" class="icon" />
+                                            <img src="assets/header/item.svg" class="icon" />
                                             <div>
                                                 <span class="dropdown-link-title">Descrição item</span>
                                                 <p>Breve descrição do item</p>
@@ -48,7 +53,7 @@
                                     </li>
                                     <li role="menuitem">
                                         <a class="dropdown-link" href="#item1">
-                                            <img src="assets/item.svg" />
+                                            <img src="assets/header/item.svg" />
                                             Item1
                                         </a>
                                     </li>
@@ -116,6 +121,47 @@
     
     <section id="teste">
         <h2>Teste</h2>
+    </section>
+
+    <section class="midle-section clearfix">
+        <div class="textcenter">
+            <span class="text">Contato</span>
+            <span class="seperator"></span>
+            <h3>Entre em contato conosco</h3>
+        </div>
+    </section>
+
+    <section class="contact-section clearfix">
+        <div class="col2 contact-col1 first">
+            <div id="map" style="height: 550px; width: 100%;"></div>
+        </div>
+        <div class="col2 contact-col2 last">
+            <div class="contract-address">
+                <p><span class="collig">Rua :</span> Av. Domingos de Almeida</p>
+                <p><span class="collig">Número :</span> 3150</p>
+                <p><span class="collig">Cidade :</span> Pelotas</p>
+            </div>
+            <div class="contact-form">
+                <h3>Quer nos conhecer melhor? Nos mande uma mensagem!</h3>
+                <form action="">
+                    <div class="clearfix">
+                        <input class="col2 first" type="text" placeholder="Nome" required>
+                        <input class="col2 last" type="text" placeholder="Sobrenome" required>
+                    </div>
+                    <div class="clearfix">
+                        <input  class="col2 first" type="email" placeholder="Email" required>
+                        <input class="col2 last" type="text" placeholder="Celular" required>
+                    </div>
+                    <div class="clearfix">
+                        <textarea name="textarea" id="" cols="30" rows="7" required>Sua mensagem aqui...</textarea>
+                    </div>
+                    <div class="clearfix">
+                        <button type="submit" class="btn btn-primary">Enviar <i class="fa fa-paper-plane" style="margin-left: 5px;"></i></button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
     </section>
 
     <footer id="footer">

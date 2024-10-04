@@ -1,8 +1,9 @@
 footer {
-    margin-top: 80vh;
+    margin-top: 500px;
     z-index: 500;
     width: 100%;
-    height: 100vh;
+    height: auto;
+    min-height: 40vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -30,16 +31,9 @@ footer::before {
     z-index: -5;
     position: absolute;
     inset: 0;
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     mask-image: linear-gradient(
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.5) 10%,
-      rgba(0, 0, 0, 0.8) 20%,
-      rgba(0, 0, 0, 1) 30%,
-      rgb(0, 0, 0)
-    );
-    -webkit-mask-image: linear-gradient(
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.5) 10%,
       rgba(0, 0, 0, 0.8) 20%,
