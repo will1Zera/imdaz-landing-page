@@ -9,14 +9,28 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/contact.css">
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "38CkUIYwiUaNLYaFx",
+        });
+    })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="js/header.js" defer></script>
     <script src="js/contact.js" defer></script>
 </head>
@@ -133,7 +147,7 @@
 
     <section class="contact-section clearfix">
         <div class="col2 contact-col1 first">
-            <div id="map" style="height: 550px; width: 100%;"></div>
+            <div id="map" style="height: 550px; width: 100%; z-index: -1;"></div>
         </div>
         <div class="col2 contact-col2 last">
             <div class="contract-address">
@@ -143,24 +157,23 @@
             </div>
             <div class="contact-form">
                 <h3>Quer nos conhecer melhor? Nos mande uma mensagem!</h3>
-                <form action="">
+                <form id="contact-form">
                     <div class="clearfix">
-                        <input class="col2 first" type="text" placeholder="Nome" required>
-                        <input class="col2 last" type="text" placeholder="Sobrenome" required>
+                        <input class="col2 first" type="text" placeholder="Nome" id="nome" required maxlength="100">
+                        <input class="col2 last" type="text" placeholder="Sobrenome" id="sobrenome" required maxlength="100">
                     </div>
                     <div class="clearfix">
-                        <input  class="col2 first" type="email" placeholder="Email" required>
-                        <input class="col2 last" type="text" placeholder="Celular" required>
+                        <input  class="col2 first" type="email" placeholder="Email" id="email" required maxlength="255">
+                        <input class="col2 last celular" type="text" placeholder="Celular" id="celular" required maxlength="15">
                     </div>
                     <div class="clearfix">
-                        <textarea name="textarea" id="" cols="30" rows="7" required>Sua mensagem aqui...</textarea>
+                        <textarea name="textarea" cols="30" rows="7" id="mensagem" required>Sua mensagem aqui...</textarea maxlength="555">
                     </div>
                     <div class="clearfix">
-                        <button type="submit" class="btn btn-primary">Enviar <i class="fa fa-paper-plane" style="margin-left: 5px;"></i></button>
+                        <button type="submit" id="contact-form-button" class="btn btn-primary">Enviar <i class="fa fa-paper-plane" style="margin-left: 5px;"></i></button>
                     </div>
                 </form>
             </div>
-
         </div>
     </section>
 

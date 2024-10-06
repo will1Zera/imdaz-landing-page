@@ -14,3 +14,46 @@ new mapboxgl.Marker({ color: 'orange' })
     .setPopup(new mapboxgl.Popup().setHTML('<h3>Instituto de Menores Dom Antônio Zattera</h3><p>Pelotas, RS</p>'))
     .addTo(map)
     .togglePopup();
+
+// EMAILJS
+
+$('#contact-form').on('submit', function(event) {
+    event.preventDefault();
+
+    $('#contact-form-button').prop('disabled', true);
+    $('#contact-form-button').html('Enviando <i class="fa fa-spinner fa-spin"></i>');;
+
+    emailjs.send("service_3fowchc", "template_wttn9h4", {
+        first_name: $("#nome").val(),
+        last_name: $("#sobrenome").val(),
+        email: $("#email").val(),
+        phone: $("#celular").val(),
+        text_message: $("#mensagem").val(),
+    }).then(function(response) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Mensagem enviada!',
+            text: 'Sua mensagem foi enviada com sucesso!',
+        });
+
+        $('#contact-form-button').prop('disabled', false);
+        $('#contact-form-button').html('Enviar <i class="fa fa-paper-plane" style="margin-left: 5px;"></i>');
+        $('#contact-form')[0].reset();
+    }, function(error) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Erro ao enviar mensagem',
+            text: 'Houve um problema ao enviar sua mensagem. Tente novamente mais tarde.',
+        });
+
+        $('#contact-form-button').prop('disabled', false);
+        $('#contact-form-button').html('Enviar <i class="fa fa-paper-plane" style="margin-left: 5px;"></i>');
+        $('#contact-form')[0].reset();
+    });
+});
+
+
+$(document).ready(function() {
+    // MASK
+    $('.celular').mask('(00) 00000-0000');
+});
