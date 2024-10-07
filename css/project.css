@@ -1,0 +1,89 @@
+.project-section {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0px 30px;
+}
+
+.project-slider__swiper {
+    width: 100%;
+    padding-top: 3.125rem;
+}
+  
+.project-slider__swiper .swiper-pagination-bullet,
+.project-slider__swiper .swiper-pagination-bullet-active {
+    background: #fff;
+}
+  
+.project-slider__pagination {
+    bottom: 1.25rem !important;
+}
+  
+.project-slider__swiper .swiper-slide {
+    width: 18.75rem;
+    height: 28.125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: self-start;
+}
+  
+.project-slider__swiper .swiper-slide h2 {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin-bottom: 0.625rem;
+    padding: 0 0 0 1.563rem;
+    text-transform: uppercase;
+}
+  
+.project-slider__swiper .swiper-slide p {
+    color: #dadada;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    padding: 0 1.563rem;
+    line-height: 1.6;
+    font-size: 0.75rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+  
+.project-slider__swiper .swiper-slide a {
+    margin: 1.25rem 1.563rem 3.438rem 1.563rem;
+    padding: 0.438em 1.875rem;
+    font-size: 0.9rem;
+}
+  
+.project-slider__swiper  .swiper-slide a:hover {
+    color: #005baa;
+}
+  
+.project-slider__swiper  .swiper-slide div {
+    display: none;
+    opacity: 0;
+    padding-bottom: 0.625rem;
+}
+  
+.project-slider__swiper  .swiper-slide-active div {
+    display: block;
+    opacity: 1;
+}
+  
+.project-slider__swiper .swiper-slide--one {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("../assets/project/project1.png") no-repeat 50% 50%/cover;
+}
+  
+.project-slider__swiper  .swiper-slide--two {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("../assets/project/project2.png") no-repeat 50% 50%/cover;
+}
+  
+.project-slider__swiper .swiper-slide--three {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("../assets/project/project3.png") no-repeat 50% 50%/cover;
+}
+  
+.project-slider__swiper .swiper-3d .swiper-slide-shadow-left,
+.project-slider__swiper .swiper-3d .swiper-slide-shadow-right {
+    background-image: none;
+}
