@@ -1,21 +1,13 @@
 .project-section {
     max-width: 1200px;
-    margin: 100px auto;
-    padding: 0px 30px;
+    margin: 0 auto;   
+    overflow: hidden;
+    padding: 20px;
 }
 
 .project-slider__swiper {
-    width: 100%;
+    width: 500px;
     padding-top: 3.125rem;
-}
-  
-.project-slider__swiper .swiper-pagination-bullet,
-.project-slider__swiper .swiper-pagination-bullet-active {
-    background: #fff;
-}
-  
-.project-slider__pagination {
-    bottom: 1.25rem !important;
 }
   
 .project-slider__swiper .swiper-slide {

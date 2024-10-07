@@ -13,23 +13,5 @@ let swiper2 = new Swiper(".project-slider__swiper", {
     },
     mousewheel: {
         thresholdDelta: 70 
-    },
-    pagination: {
-        el: ".project-slider__pagination",
-        clickable: true 
-    },
-    breakpoints: {
-        640: {
-            slidesPerView: 2 
-        },
-        768: {
-            slidesPerView: 1 
-        },
-        1024: {
-            slidesPerView: 2 
-        },
-        1560: {
-            slidesPerView: 3 
-        } 
     }
 });
