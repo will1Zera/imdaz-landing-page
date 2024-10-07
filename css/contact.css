@@ -56,12 +56,13 @@
     color: var(--primary-color);
 }
 
-@media only screen and (max-width: 1266px) {
+@media (max-width: 1266px) {
 	.contact-section {
 		width: 100%;
 	}
 }
-@media only screen and (max-width: 960px) {
+
+@media (max-width: 960px) {
 	.container {
 		padding: 0 30px 70px;
 	}
@@ -79,7 +80,8 @@
 		padding: 0;
 	}
 }
-@media only screen and (max-width: 768px) {
+
+@media (max-width: 768px) {
 	.contact-section .contract-address {
 		font-size: 14px;
 	}
@@ -90,7 +92,7 @@
 
 	.contact-section .contact-form input[type="text"], .contact-section .contact-form input[type="email"], .contact-section .contact-form textarea {
 		padding: 10px;
-		margin:3px 0;
+		margin: 3px 0;
 	}
 
 	.contact-section .contact-form input[type="submit"] {
@@ -98,7 +100,8 @@
 		font-size: 14px;
 	}
 }
-@media only screen and (max-width: 420px) {
+
+@media (max-width: 420px) {
 	.section1 h1 {
 		font-size: 28px;
 	}	
