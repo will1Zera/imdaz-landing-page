@@ -105,6 +105,12 @@ button {
     }
 }
 
+@media screen and (max-width: 800px) {
+    .about-section {
+        margin: 0px auto;
+    }
+}
+
 #whatsapp-btn{
 	position: fixed;
 	width: 60px;
