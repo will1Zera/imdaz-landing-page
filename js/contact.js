@@ -11,9 +11,7 @@ let map = new mapboxgl.Map({
 
 new mapboxgl.Marker({ color: 'orange' })
     .setLngLat([-52.3030528, -31.7520277])
-    .setPopup(new mapboxgl.Popup().setHTML('<h3>Instituto de Menores Dom Antônio Zattera</h3><p>Pelotas, RS</p>'))
-    .addTo(map)
-    .togglePopup();
+    .addTo(map);
 
 // EMAILJS
 
