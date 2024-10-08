@@ -54,6 +54,7 @@ footer::before {
 .footer-col3 {
     background-color: #121212;
     border-radius: calc(0.5 * 2rem);
+    color: #818181;
 }
 
 .footer-social {

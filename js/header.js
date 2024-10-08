@@ -1,9 +1,11 @@
+// MENU
+
 $(document).ready(function() {
     const dropdown_btn = $(".dropdown-btn");
     const dropdown = $(".dropdown");
     const hamburger_btn = $("#hamburger");
     const nav_menu = $(".menu");
-    const links = $(".dropdown a");
+    const links = $("a.nav-link");
 
     function setAriaExpandedFalse() {
         dropdown_btn.attr("aria-expanded", "false");
@@ -49,4 +51,20 @@ $(document).ready(function() {
     });
 
     hamburger_btn.on("click", toggleHamburger);
+
+    $('.nav-link').on('click', function() {
+        let target = $(this).attr('href');
+
+        if (target) {
+            $('html, body').animate({
+                scrollTop: $(target).offset().top
+            }, 800);
+        }
+    });
+
+    $('#contact-btn').on('click', function() {
+        $('html, body').animate({
+            scrollTop: $('#contact').offset().top
+        }, 800);
+    });
 });
